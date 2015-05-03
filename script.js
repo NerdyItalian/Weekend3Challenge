@@ -7,7 +7,7 @@ function searchCallback(results) {
     var cell = '';
     for (var i = 0; i < results.length; i++){
         var wine = results[i];
-            cell += '<div class="col-md-2"><h3>'  + wine.Products.name + '</h3><p>URL: ' + wine.Products.url + '</div>';
+            cell += '<div class="col-md-2"><h3>'  + Status.Products.wine.name + '</h3><p>URL: ' + wine.Products.url + '</div>';
             count++
             if (count == 6){
                 $(".searchResults").append('<div class="row">' + cell + '</div>');
