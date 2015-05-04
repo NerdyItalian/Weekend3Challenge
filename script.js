@@ -32,15 +32,14 @@ function search(query){
 
     $.ajax ({
         type: 'GET',
-        dataType: 'jsonp',
+        dataType: 'json',
         crossDomain: true,
-        jsonp: 'json_callback',
         url: 'http://services.wine.com/api/beta2/service.svc/json/catalog?search=' + encodeURI(query) + '&apikey=' + apikey,
         complete: function(){
             console.log('ajax complete');
         },
         success: function(data){
-            searchCallback(data.results);
+            searchCallback(data);
         }
     });
 
